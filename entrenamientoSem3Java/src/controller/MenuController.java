@@ -5,7 +5,7 @@ import javax.swing.*;
 public class MenuController {
 
 
-    public void showMenu() {
+    public static void showMenu() {
         String[] options = {"Add product", "List products", "Update price", "Update stock", "Delete product", "Search product by name", "Exit  with summary"};
         int option;
 
