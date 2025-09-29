@@ -1,11 +1,14 @@
 package models;
 
-public abstract class Products {
+public class Products {
 
     private int id;
     private String name;
     private double price;
     private int stock;
+
+    // Default constructor for JPA/ORM compatibility
+    public Products() {}
 
     public Products(int id, String name, double price, int stock) {
         this.id = id;
@@ -44,5 +47,15 @@ public abstract class Products {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Products{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", stock=" + stock +
+                '}';
     }
 }
